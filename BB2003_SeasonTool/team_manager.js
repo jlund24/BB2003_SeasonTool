@@ -203,13 +203,7 @@ function populateRosterSorts(){
 
 ///Generates the coach file from all update functions
 function generateCoachFile(){
-  for(var start_row = 0; start_row < coach_file_array.length; start_row++){
-    if (coach_file_array[start_row].length>10){
-      if (coach_file_array[start_row].slice(0,8)=="roster0=")
-      updateRosters_R(start_row);
-
-      }
-      }
+  updateRosters_R(44);
 
   var myNode = document.getElementById("coach_text_show");
     while (myNode.firstChild) {
@@ -299,12 +293,11 @@ function uploadCoachFile(){
       a.appendChild(document.createElement('br'));
     }
 
-    for(var start_row = 0; start_row < coach_file_array.length; start_row++){
-      if (coach_file_array[start_row].length>10){
-        if (coach_file_array[start_row].slice(0,8)=="roster0=")
-        uploadRosters(start_row);
-        }
-        }
+if (BB2001 == true){
+    uploadRosters(46);
+}else{
+  uploadRosters(44);
+}
 
 }
 
